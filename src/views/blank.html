@@ -16,7 +16,6 @@
 -->
 {% block content %}
 
-<h2 class="slds-text-align--center slds-text-heading--large slds-m-around--large">
   <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header43">
   <div class="slds-modal__container">
     <div class="slds-modal__header">
@@ -26,31 +25,84 @@
         </svg>
         <span class="slds-assistive-text">Close</span>
       </button>
-      <h2 id="header43" class="slds-text-heading--medium">New Address</h2>
+      <h2 id="header43" class="slds-text-heading--medium">Create Address</h2>
     </div>
     <div class="slds-modal__content slds-p-around--medium">
       <fieldset class="slds-form--compound">
         <div class="slds-form-element__group">
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
-              <label class="slds-form-element__label" for="input-03">Street</label>
-              <input type="text" id="input-03" class="slds-input" />
+              <label class="slds-form-element__label" for="addrLine1">
+                <abbr class="slds-required" title="required">*</abbr> Address Line 1
+              </label>
+              <input type="text" id="addrLine1" class="slds-input" required=""/>
+            </div>
+            <div class="slds-form-element slds-size--1-of-2">
+              <label class="slds-form-element__label" for="addrLine2">
+                Address Line 2
+              </label>
+              <input type="text" id="addrLine2" class="slds-input" required=""/>
             </div>
           </div>
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
-              <label class="slds-form-element__label" for="input-04">City</label>
-              <input type="text" id="input-04" class="slds-input" />
+              <label class="slds-form-element__label" for="input-04">
+                <abbr class="slds-required" title="required">*</abbr> City
+              </label>
+              <input type="text" id="input-04" class="slds-input" required=""/>
             </div>
             <div class="slds-form-element slds-size--1-of-2">
-              <label class="slds-form-element__label" for="input-05">State</label>
+              <label class="slds-form-element__label" for="input-05">Prestigious</label>
               <input type="text" id="input-05" class="slds-input" />
             </div>
           </div>
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
-              <label class="slds-form-element__label" for="input-06">ZIP Code</label>
+              <label class="slds-form-element__label" for="input-07">
+                <abbr class="slds-required" title="required">*</abbr> Country
+              </label>
+              <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                  <select id="select-01" class="slds-select">
+                    <option>--None--</option>
+                    <option selected="">USA</option>
+                    <option>Canada</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="slds-form-element slds-size--1-of-2">
+              <label class="slds-form-element__label" for="input-08">
+                <abbr class="slds-required" title="required">*</abbr> State/Province
+              </label>
+              <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                  <select id="select-01" class="slds-select">
+                    <option selected="">--None--</option>
+                    <option>Alabama</option>
+                    <option>Massachusetts</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size--1-of-2">
+              <label class="slds-form-element__label" for="input-06">
+                <abbr class="slds-required" title="required">*</abbr> ZIP/Postal Code
+              </label>
               <input type="text" id="input-06" class="slds-input" />
+            </div>
+            <div class="slds-form-element slds-size--1-of-2">
+              <label class="slds-form-element__label" for="checkbox-146">
+                <abbr class="slds-required" title="required">*</abbr> P.O. Box?
+              </label>
+              <div class="slds-form-element__control">
+                <label class="slds-checkbox">
+                  &nbsp;<input type="checkbox" name="default" id="checkbox-146" />
+                  <span class="slds-checkbox--faux"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -60,10 +112,7 @@
       <div class="slds-progress slds-progress--shade slds-order--2">
         <ol class="slds-progress__list">
           <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-1-tooltip" title="settings">
-              <svg class="slds-button__icon" aria-hidden="true">
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
-              </svg>
+            <button class="slds-button slds-progress__marker" aria-describedby="step-1-tooltip">
               <span class="slds-assistive-text">Step 1 - Active</span>
             </button>
           </li>
@@ -90,6 +139,5 @@
   </div>
 </div>
 <div class="slds-backdrop slds-backdrop--open"></div>
-</h2>
 
 {% endblock %}
