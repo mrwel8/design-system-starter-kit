@@ -44,3 +44,13 @@ $static-font-path: '/assets/fonts/webfonts';
 .slds-checkbox--faux {
   margin-left: 0.250rem;
 }
+
+.slds-has-blur-focus {
+  &:hover,
+  &:focus,
+  &:active {
+    .slds-card {
+      box-shadow: 0 0 3px #0070D2;
+    }
+  }
+}
