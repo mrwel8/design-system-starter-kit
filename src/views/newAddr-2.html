@@ -95,20 +95,28 @@
               <span class="slds-assistive-text">Step 1 - Completed</span>
             </button>
           </li>
-          <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-2-tooltip">
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-2-tooltip" title="settings">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+              </svg>
               <span class="slds-assistive-text">Step 2</span>
             </button>
           </li>
-          <li class="slds-progress__item">
+          <li class="slds-progress__item slds-is-active">
             <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
               <span class="slds-assistive-text">Step 3 </span>
             </button>
           </li>
+          <li class="slds-progress__item">
+            <button class="slds-button slds-progress__marker" aria-describedby="step-4-tooltip">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
         </ol>
         <div class="slds-progress-bar">
-          <span class="slds-progress-bar__value" style="width:50%;">
-            <span class="slds-assistive-text">Progress: 50%</span>
+          <span class="slds-progress-bar__value" style="width:66%;">
+            <span class="slds-assistive-text">Progress: 66%</span>
           </span>
         </div>
       </div>

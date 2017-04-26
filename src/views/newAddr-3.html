@@ -1,0 +1,143 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+  <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header43">
+  <div class="slds-modal__container">
+    <div class="slds-modal__header">
+      <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close">
+        <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+        </svg>
+        <span class="slds-assistive-text">Close</span>
+      </button>
+      <h2 id="header43" class="slds-text-heading--medium">Create Address</h2>
+    </div>
+    <div class="slds-modal__content slds-p-around--medium">
+      <p>Propagate the address to other household members.</p>
+      <br/>
+      <table class="slds-table slds-table--bordered slds-table--compact slds-table--fixed-layout">
+        <thead>
+          <tr class="slds-text-title--caps">
+            <th scope="col" class="slds-cell-shrink slds-text-align--right">
+              <span class="slds-checkbox">
+                <input type="checkbox" name="options" id="checkbox-126"/>
+                <label class="slds-checkbox__label" for="checkbox-126">
+                  <span class="slds-checkbox--faux"></span>
+                  <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                </label>
+              </span>
+            </th>
+            <th scope="col" style="width: 25%;">
+              <div class="slds-truncate" title="Name">Name</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Current Address">Current Address</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="slds-is-selected">
+            <td role="gridcell" class="slds-text-align--right">
+              <span class="slds-checkbox">
+                <input type="checkbox" name="options" id="checkbox-127" checked=""/>
+                <label class="slds-checkbox__label" for="checkbox-127">
+                  <span class="slds-checkbox--faux"></span>
+                  <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                </label>
+              </span>
+            </td>
+            <th scope="row" data-label="Name">
+              <div class="slds-truncate" title="Bob Jones">Bob Jones</div>
+            </th>
+            <td data-label="Current Address" class="slds-cell-wrap">
+              <div title="">
+                316 Stuart Street, Suite 200
+                </br>Boston, MA 02116
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td role="gridcell" class="slds-text-align--right">
+              <span class="slds-checkbox">
+                <input type="checkbox" name="options" id="checkbox-128" />
+                <label class="slds-checkbox__label" for="checkbox-128">
+                  <span class="slds-checkbox--faux"></span>
+                  <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                </label>
+              </span>
+            </td>
+            <th scope="row" data-label="Name">
+              <div class="slds-truncate" title="Job Bones">Job Bones</div>
+            </th>
+            <td data-label="Current Address" class="slds-cell-wrap">
+              <div title="">
+                316 Stuart Street, Suite 300
+                </br>Boston, MA 02116
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="slds-modal__footer slds-grid slds-grid--align-spread">
+      <div class="slds-progress slds-progress--shade slds-order--2">
+        <ol class="slds-progress__list">
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-1-tooltip" title="settings">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+              </svg>
+              <span class="slds-assistive-text">Step 1 - Completed</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-2-tooltip" title="settings">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+              </svg>
+              <span class="slds-assistive-text">Step 2</span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-completed">
+            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-3-tooltip" title="settings">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+              </svg>
+              <span class="slds-assistive-text">Step 3 </span>
+            </button>
+          </li>
+          <li class="slds-progress__item slds-is-active">
+            <button class="slds-button slds-progress__marker" aria-describedby="step-4-tooltip">
+              <span class="slds-assistive-text">Step 4 </span>
+            </button>
+          </li>
+        </ol>
+        <div class="slds-progress-bar">
+          <span class="slds-progress-bar__value" style="width:100%;">
+            <span class="slds-assistive-text">Progress: 100%</span>
+          </span>
+        </div>
+      </div>
+      <button class="slds-button slds-button--neutral slds-order--1">Back</button>
+      <button class="slds-button slds-button--brand slds-order--3">Save</button>
+    </div>
+  </div>
+</div>
+<div class="slds-backdrop slds-backdrop--open"></div>
+
+{% endblock %}
