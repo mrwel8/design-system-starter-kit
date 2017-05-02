@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salesforce Lightning Design System Starter Kit</title>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="robots" content="noindex, nofollow" />
+{% extends "_template.html" %}
+{% block content %}
 
-  <!-- Prototype styles -->
-  <link rel="stylesheet" href="/styles/index.css" />
-</head>
-<body>
-  <div class="slds-p-around--large slds-container--center slds-container--small">
-    <h1 class="slds-text-heading--large">
-      Welcome to the Design System Starter Kit
-    </h1>
-    <p class="slds-text-body--regular slds-m-vertical--large">A rapid prototyping environment using the <a href="https://www.lightningdesignsystem.com">Lightning Design System</a>, brought to you by <a href="https://twitter.com/SalesforceUX">Salesforce UX</a>.</p>
+<!--
+  Boilerplate for the Dreamforce 2016 workshop:
+  "Rapid prototyping with the Design System Starter Kit and UI Kit"
+  http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/
+-->
 
-    <img src="/assets/img-efficiency.svg" alt="" />
+<!--
+  Here's picture you can put into your content.
+  Feel free to let your creativity go wild and change this image to your taste!
+-->
+<!-- <img src="/assets/workshop-salesforce-red.jpg" alt="" class="slds-size--2-of-3 slds-m-bottom--large" /> -->
 
-    <h2 class="slds-text-heading--medium slds-m-top--large">Get Started</h2>
-    <p class="slds-text-body--regular slds-m-top--large">Edit files in the <a href="https://github.com/salesforce-ux/design-system-starter-kit/tree/master/src"><code>src</code> directory</a> to start building your prototype.</p>
-    <p class="slds-text-body--regular slds-m-top--large">Lightning Design System component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Example Prototype</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">We’ve put together a prototype to show you what the starter kit is capable of, have a look!</p>
-    <p><a href="/example.html" class="slds-button slds-button--brand">Example Prototype</a></p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Dreamforce Workshop Tutorial</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Learn how to design in the browser with the Dreamforce 2016 tutorial, “Rapid prototyping with the Design System Starter Kit and UI Kit”.</p>
-    <p>
-      <a href="http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/" class="slds-button slds-button--brand">Dreamforce Tutorial</a>
-      <a href="/workshop.html" class="slds-button slds-button--neutral">DIY Boilerplate</a>
-      <a href="/workshop-done.html" class="slds-button slds-button--neutral">Result</a>
-    </p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Feedback and Questions</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Ask questions about prototyping using the design system, report issues about the starter kit… <a href="https://github.com/salesforce-ux/design-system-starter-kit/">on the GitHub repository</a>.</p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">See Also</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">More comfortable designing in <a href="https://www.sketchapp.com/">Sketch</a>? Try the <a href="https://github.com/salesforce-ux/design-system-ui-kit/">Design System UI Kit</a>.</p>
+<!-- PAGE HEADER: https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home -->
 
+<!-- /PAGE HEADER -->
+
+<!-- WIZARD: https://www.lightningdesignsystem.com/components/process/#flavor-wizard -->
+
+<!-- /WIZARD -->
+
+<!-- COLUMNS - already populated for you: https://www.lightningdesignsystem.com/components/utilities/grid/#flavor-manual-sizing -->
+<div class="slds-m-around--small">
+
+  <div>Welcome to our wireframes!</div>
+  </br>
+
+  <div>
+    <ul>
+      <li class="slds-text-title--caps">Address Validation</li>
+      <li>
+        <ul class="slds-is-nested">
+          <li><a href="/addVal/newParty.html">Add Party</a></li>
+          <li><a href="/testAddVal/newAddr-0.html">Test Workflow</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/vendor/svg4everybody.min.js"></script>
-  <script>svg4everybody();</script>
-</body>
-</html>
+</div>
+<!-- /COLUMNS -->
+
+{% endblock %}
