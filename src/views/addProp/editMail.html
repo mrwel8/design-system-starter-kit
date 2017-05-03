@@ -78,6 +78,16 @@
       <h2 id="header43" class="slds-text-heading--medium">Propagate Address</h2>
     </div>
     <div class="slds-modal__content slds-p-around--medium">
+      <figure class="slds-box slds-hide">
+        <div class="slds-inline_icon_text slds-grid slds-inline_icon_text--error">
+          <svg class="slds-icon slds-icon-text-error slds-icon--small slds-m-right--small slds-col slds-no-flex" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+          </svg>
+          <div class="slds-col slds-align-middle slds-text-color--error">
+            <p>Review the following errors.</p>
+          </div>
+        </div>
+      </figure>
       <p>Select household members whose Mailing Address will be updated with the address below:</p>
       <div class="slds-m-around--small">
         316 Stuart Street, Suite 200
@@ -175,7 +185,7 @@
             <td data-label="Current Address" class="slds-cell-wrap">
               <fieldset class="slds-form-element">
                 <div class="slds-form-element__control">
-                  <span class="slds-radio slds-p-vertical--xxx-small">
+                  <span class="slds-radio slds-border--bottom slds-p-vertical--xxx-small">
                     <input type="radio" id="radio-32" name="options3" disabled="" />
                     <label class="slds-radio__label" for="radio-32">
                       <span class="slds-radio--faux"></span>
@@ -185,6 +195,14 @@
                           </br>Denver, CO 80202
                           </br>03/01 to 04/30
                         </div>
+                      </span>
+                    </label>
+                  </span>
+                  <span class="slds-radio slds-p-vertical--xxx-small">
+                    <input type="radio" id="radio-34" name="options3" disabled=""/>
+                    <label class="slds-radio__label" for="radio-34">
+                      <span class="slds-radio--faux"></span>
+                      <span class="slds-form-element__label">Create new Mailing Address
                       </span>
                     </label>
                   </span>
@@ -225,10 +243,16 @@
     </div>
     <div class="slds-modal__footer">
       <button class="slds-button slds-button--neutral">Cancel</button>
-      <button class="slds-button slds-button--brand">Save</button>
+      <button class="slds-button slds-button--brand" onclick="showError();">Save</button>
     </div>
   </div>
 </div>
 <div class="slds-backdrop slds-backdrop--open"></div>
+<script>
+  function showError() {
+    var error = document.getElementsByClassName("slds-hide");
+    error[0].style.display = "block";
+  }
+</script>
 
 {% endblock %}
