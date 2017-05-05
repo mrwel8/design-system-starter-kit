@@ -17,6 +17,49 @@
 {% block content %}
 
 <div class="slds-docked_container">
+  <div class="slds-docked-composer slds-grid slds-grid--vertical" role="dialog" aria-labelledby="panel-heading-01" style="height: 370px;">
+    <div class="slds-docked-composer__header slds-grid slds-shrink-none">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure slds-m-right--x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon--small slds-icon-text-default" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 id="panel-heading-01">New Party</h2>
+        </div>
+      </div>
+      <div class="slds-col--bump-left">
+        <button class="slds-button slds-button--icon" title="Minimize window">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+          </svg>
+          <span class="slds-assistive-text">Minimize Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Expand Composer">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"></use>
+          </svg>
+          <span class="slds-assistive-text">Expand Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Close">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close Composer Panel</span>
+        </button>
+      </div>
+    </div>
+    <div class="slds-docked-composer__body slds-docked-composer__body--form">
+    </div>
+    <footer class="slds-docked-composer__footer slds-shrink-none">
+      <div class="slds-col--bump-left slds-text-align--right">
+        <button class="slds-button slds-button--brand">Save</button>
+      </div>
+    </footer>
+  </div>
   <div class="slds-docked-composer slds-grid slds-grid--vertical slds-is-open" role="dialog" aria-labelledby="panel-heading-01" style="height: 370px;">
     <div class="slds-docked-composer__header slds-grid slds-shrink-none">
       <div class="slds-media slds-media--center">
