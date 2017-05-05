@@ -16,24 +16,49 @@
 -->
 {% block content %}
 
-  <div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header43">
-  <div class="slds-modal__container">
-    <div class="slds-modal__header">
-      <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close">
-        <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
-          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-        </svg>
-        <span class="slds-assistive-text">Close</span>
-      </button>
-      <h2 id="header43" class="slds-text-heading--medium">Create Address</h2>
+<div class="slds-docked_container">
+  <div class="slds-docked-composer slds-grid slds-grid--vertical slds-is-open" role="dialog" aria-labelledby="panel-heading-01" style="height: 370px;">
+    <div class="slds-docked-composer__header slds-grid slds-shrink-none">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure slds-m-right--x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon--small slds-icon-text-default" aria-hidden="true">
+              <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom78"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 id="panel-heading-01">New Address</h2>
+        </div>
+      </div>
+      <div class="slds-col--bump-left">
+        <button class="slds-button slds-button--icon" title="Minimize window">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+          </svg>
+          <span class="slds-assistive-text">Minimize Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Expand Composer">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"></use>
+          </svg>
+          <span class="slds-assistive-text">Expand Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Close">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close Composer Panel</span>
+        </button>
+      </div>
     </div>
-    <div class="slds-modal__content slds-p-around--medium">
+    <div class="slds-docked-composer__body slds-docked-composer__body--form">
       <fieldset class="slds-form--compound">
         <div class="slds-form-element__group">
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="addrLine1">
-                <abbr class="slds-required" title="required">*</abbr> Address Line 1
+                <span class="slds-required" title="required">*</span>Address Line 1
               </label>
               <input type="text" id="addrLine1" class="slds-input" required=""/>
             </div>
@@ -47,13 +72,13 @@
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="input-04">
-                <abbr class="slds-required" title="required">*</abbr> City
+                <span class="slds-required" title="required">*</span>City
               </label>
               <input type="text" id="input-04" class="slds-input" required=""/>
             </div>
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="input-06">
-                <abbr class="slds-required" title="required">*</abbr> ZIP/Postal Code
+                <span class="slds-required" title="required">*</span>ZIP/Postal Code
               </label>
               <input type="text" id="input-06" class="slds-input" />
             </div>
@@ -61,7 +86,7 @@
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="select-01">
-                <abbr class="slds-required" title="required">*</abbr> Country
+                <span class="slds-required" title="required">*</span>Country
               </label>
               <div class="slds-form-element__control">
                 <div class="slds-select_container">
@@ -75,7 +100,7 @@
             </div>
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="select-02">
-                <abbr class="slds-required" title="required">*</abbr> State/Province
+                <span class="slds-required" title="required">*</span>State/Province
               </label>
               <div class="slds-form-element__control">
                 <div class="slds-select_container">
@@ -91,11 +116,19 @@
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size--1-of-2">
               <label class="slds-form-element__label" for="checkbox-146">
-                <abbr class="slds-required" title="required">*</abbr> P.O. Box?
+                P.O. Box?
               </label>
+              <div class="slds-form-element__icon">
+                <a href="javascript:void(0);">
+                  <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Help</span>
+                </a>
+              </div>
               <div class="slds-form-element__control">
                 <label class="slds-checkbox">
-                  &nbsp;<input type="checkbox" name="default" id="checkbox-146" />
+                  <input type="checkbox" name="default" id="checkbox-146" />
                   <span class="slds-checkbox--faux"></span>
                 </label>
               </div>
@@ -104,46 +137,14 @@
             </div>
           </div>
         </div>
-        </fieldset>
+      </fieldset>
     </div>
-    <div class="slds-modal__footer slds-grid slds-grid--align-spread">
-      <div class="slds-progress slds-progress--shade slds-order--2">
-        <ol class="slds-progress__list">
-          <li class="slds-progress__item slds-is-completed">
-            <button class="slds-button slds-button--icon slds-progress__marker slds-progress__marker--icon" aria-describedby="step-1-tooltip" title="settings">
-              <svg class="slds-button__icon" aria-hidden="true">
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
-              </svg>
-              <span class="slds-assistive-text">Step 1 - Active</span>
-            </button>
-          </li>
-          <li class="slds-progress__item slds-is-active">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-2-tooltip">
-              <span class="slds-assistive-text">Step 2</span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
-              <span class="slds-assistive-text">Step 3 </span>
-            </button>
-          </li>
-          <li class="slds-progress__item">
-            <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip">
-              <span class="slds-assistive-text">Step 3 </span>
-            </button>
-          </li>
-        </ol>
-        <div class="slds-progress-bar">
-          <span class="slds-progress-bar__value" style="width:33%;">
-            <span class="slds-assistive-text">Progress: 33%</span>
-          </span>
-        </div>
+    <footer class="slds-docked-composer__footer slds-shrink-none">
+      <div class="slds-col--bump-left slds-text-align--right">
+        <a href="/addVal/newAddr-2.html" class="slds-button slds-button--brand">Validate</a>
       </div>
-      <a href="/testAddVal/newAddr-0.html" class="slds-button slds-button--neutral slds-order--1">Back</a>
-      <a href="/testAddVal/newAddr-2.html" class="slds-button slds-button--brand slds-order--3">Validate</a>
-    </div>
+    </footer>
   </div>
 </div>
-<div class="slds-backdrop slds-backdrop--open"></div>
 
 {% endblock %}

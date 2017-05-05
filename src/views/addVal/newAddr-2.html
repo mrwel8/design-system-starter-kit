@@ -1,0 +1,115 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<div class="slds-docked_container">
+  <div class="slds-docked-composer slds-grid slds-grid--vertical slds-is-open" role="dialog" aria-labelledby="panel-heading-01" style="height: 370px;">
+    <div class="slds-docked-composer__header slds-grid slds-shrink-none">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure slds-m-right--x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon--small slds-icon-text-default" aria-hidden="true">
+              <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom78"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 id="panel-heading-01">New Address</h2>
+        </div>
+      </div>
+      <div class="slds-col--bump-left">
+        <button class="slds-button slds-button--icon" title="Minimize window">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+          </svg>
+          <span class="slds-assistive-text">Minimize Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Expand Composer">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#expand_alt"></use>
+          </svg>
+          <span class="slds-assistive-text">Expand Composer Panel</span>
+        </button>
+        <button class="slds-button slds-button--icon" title="Close">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close Composer Panel</span>
+        </button>
+      </div>
+    </div>
+    <div class="slds-docked-composer__body slds-docked-composer__body--form">
+      <p>Review the residence address you entered and select the appropriate option below.</p>
+      <div class="slds-grid">
+        <div class="slds-size--1-of-2 slds-p-around--small">
+          <a class="slds-has-blur-focus">
+            <article class="slds-card slds-card--narrow">
+              <div class="slds-m-around--small slds-grid">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                  <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-custom-custom15" title="description of icon when needed">
+                      <svg class="slds-icon slds-icon--small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom78"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-text-heading--small">Entered Address</span>
+                    </h2>
+                  </div>
+                </header>
+              </div>
+              <div class="slds-card__body slds-m-left--small">
+                <div>316 Stuart Street, Suite 300</div>
+                <div>Boston, MA 02116</div>
+              </div>
+            </article>
+          </a>
+        </div>
+        <div class="slds-size--1-of-2 slds-p-around--small">
+          <a class="slds-has-blur-focus">
+            <article class="slds-card slds-card--narrow">
+              <div class="slds-m-around--small slds-grid">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                  <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-custom-custom6" title="description of icon when needed">
+                      <svg class="slds-icon slds-icon--small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom78"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-text-heading--small">Validated Address</span>
+                    </h2>
+                  </div>
+                </header>
+              </div>
+              <div class="slds-card__body slds-m-left--small">
+                <div>316 STUART ST STE 300</div>
+                <div>BOSTON, MA 02116-5242</div>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
